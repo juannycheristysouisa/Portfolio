@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juanny Cheristy Souisa</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- menu -->
+    <nav>
+      <div class="wrapper navbar">
+        <div class="logo">Juanny Cheristy Souisa</div>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#project">Project</a></li>
+          <li><a href="#about-me">About Me</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <script>
+    const toggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+    
+    toggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
+
+  document.querySelectorAll("#nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("show");
+    });
+    });
+    </script>
+
+
+
+
+    <!-- hero / jumbotron -->
+    <header id="home">
+      <div class="header-opacity"></div>
+      <div class="header-jumbotron">
+        <h4>PORTFOLIO</h4>
+        <h5>
+          Informatics Student | Passionate in
+          <span class="highlight">Web Development</span> &
+          <span class="highlight">Data Analysis</span>
+          <br />
+          Open to Internship & Collaboration
+        </h5>
+        <p>
+          UNIVERSITAS BINA SARANA INFORMATIKA
+          <span class="highlight">#UBSI</span>
+        </p>
+        <a href="#academic-projects" class="button button-xl"
+          >Jelajahi Portfolio</a
+        >
+      </div>
+    </header>
+
+    <!-- Statistic -->
+     <section id="statistic">
+      <div class="wrapper">
+        <div class="stat-box">
+          <i class="fa-solid fa-list-check"></i>
+          <p>10+</p>
+          <small>Completed Projects</small>
+        </div>
+        <div class="stat-box">
+          <i class="fa-solid fa-laptop-code"></i>
+          <p>5+</p>
+          <small>Web-Based Apps</small>
+        </div>
+        <div class="stat-box">
+          <i class="fa-solid fa-database"></i>
+          <p>4+</p>
+          <small>Data Analysis Projects</small>
+        </div>
+        <div class="stat-box">
+          <i class="fa-solid fa-calendar"></i>
+          <p>3+</p>
+          <small>Event Organizer Projects</small>
+        </div>
+      </div>
+    </section>
+
+
+    <!--Academic Projects -->
+    <section id="academic-projects">
+      <div class="wrapper">
+        <h4>Academic <span>Projects</span></h4>
+        <p>
+          Documentation of academic projects that reflect technical and
+          collaborative competencies
+        </p>
+
+        <div class="project-card-horizontal">
+          <img src="images/course/Ai-objek deteksi.jpg" />
+          <div class="desc">
+            <div class="judul-helpdesk">
+              <h4>
+                Deteksi Objek menggunakan Roboflow
+                <span class="tahun"> - 2023</span>
+              </h4>
+            </div>
+            <ul>
+              <li>
+                Mengembangkan model deteksi objek untuk klasifikasi jerawat menggunakan platform Roboflow sebagai bagian dari proyek akademik
+              </li>
+              <li>
+                Membuat dataset kustom dengan mengumpulkan dan memberi anotasi pada gambar wajah untuk memberi label berbagai jenis jerawat (misalnya, komedo hitam, komedo putih, papula, pustula)
+              </li>
+              <li>
+                Melatih dan menerapkan model untuk melakukan deteksi jenis jerawat langsung dari gambar wajah
+              </li>
+              <li>
+                Mengevaluasi performa model berdasarkan metrik akurasi dan menyajikan hasil deteksi secara visual
+              </li>
+              <li>Scan QR code to view project</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-card-horizontal">
+          <img src="images/course/web-furniture.jpg" />
+          <div class="desc">
+            <div class="judul-helpdesk">
+              <h4>
+                Website E-commerce Sederhana  <span class="tahun"> - 2024</span>
+              </h4>
+            </div>
+            <ul>
+              <li>
+                Mengembangkan situs web e-commerce sederhana bernama Furniture Familly yang berfokus pada penjualan furnitur rumah tangga
+              </li>
+              <li>
+                Mengimplementasikan fitur utama seperti katalog produk, keranjang belanja, manajemen pesanan, dan pembuatan PDF & EXCEL untuk item yang telah dibeli
+              </li>
+              <li>
+                Menggunakan HTML, CSS, PHP, dan MySQL untuk pengembangan backend dan integrasi basis data
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-card-horizontal">
+          <img src="images/course/web-helpdesk.jpg" />
+          <div class="desc">
+            <div class="judul-helpdesk">
+              <h4>
+                Sistem Helpdesk Berbasis Web <span class="tahun"> - 2024</span>
+              </h4>
+            </div>
+            <ul>
+              <li>
+                Merancang dan mengembangkan Sistem Helpdesk berbasis web menggunakan HTML, CSS, PHP, dan MySQL
+              </li>
+              <li>
+                Mengimplementasikan sistem autentikasi pengguna yang aman serta fitur manajemen tiket untuk pelaporan dan pelacakan masalah
+              </li>
+              <li>
+                Memungkinkan staf dukungan untuk mengelola dan merespons masalah teknis secara efisien melalui platform terpusat
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-card-horizontal">
+          <img src="images/course/Pelatihan.jpg" />
+          <div class="desc">
+            <div class="judul-helpdesk">
+              <h4>
+                MikroTik Network Configuration <span class="tahun"> - 2025</span>
+              </h4>
+            </div>
+              <ul>
+                <li>
+                  Mengikuti program pelatihan dan sertifikasi intensif untuk konfigurasi jaringan MikroTik menggunakan Winbox dan RouterOS
+                </li>
+                <li>
+                  Memperoleh pengalaman langsung dalam mengonfigurasi alamat IP, routing, pengaturan DHCP, firewall, dan NAT menggunakan perangkat MikroTik
+                </li>
+                <li>
+                  Bekerja dalam tim untuk membangun dan melakukan troubleshooting jaringan fisik, termasuk crimping kabel Ethernet dan pengaturan LAN
+                </li>
+                <li>
+                  Berhasil menyelesaikan ujian akhir dan memperoleh sertifikasi MTCNA (MikroTik Certified Network Associate)
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me -->
+    <section id="about-me">
+      <div class="wrapper">
+        <h4>About <span>Me</span></h4>
+        <div>
+          <div class="foto"><img src="images/profile.jpg" /></div>
+          <div class="desc">
+            <p>
+              I am Informatics student with strong passion in Software Engineer,
+              data analysis, and database development. Experienced in real
+              projects involving data matching, data cleaning, and automation
+              using Python, MySQL, and Excel. Comfortable working with both code
+              and visual tools (R, Orange Data Mining, Visual Studio Code,
+              Mysql, Navicat ), and eager to contribute to building efficient,
+              data-driven solutions
+            </p>
+            <div class="social">
+              <a href="https://www.linkedin.com/in/juanny-cheristy-souisa-2ab09230b/"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://www.instagram.com/christysouisaaa?igsh=MW5yanM3Zm1kZWt0Zw=="><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.tiktok.com/@crystalltwilight?_t=ZS-8yWAY2JouQ6&_r=1"><i class="fa-brands fa-tiktok"></i></a>
+              <a href="https://www.facebook.com/share/1CEkCbnJhc/"><i class="fa-brands fa-square-facebook"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificate-->
+     <section id="certificate">
+      <div class="wrapper">
+        <h4>CERTIFICATE</h4>
+
+        <div class="grid-alt">
+         <div class="item">
+          <div class="item-detail">
+            <img src="images/course/python.png" alt="Python Certificate" />
+            <div>
+              <small><i class="fa-solid fa-clock"></i> 50 Jam</small>
+              <a href="certificate/Python.pdf" class="button" target="_blank">
+                <i class="fa-solid fa-arrow-right"></i> Lihat
+              </a>
+            </div>
+          </div>
+        </div>
+          <div class="item">
+          <div class="item-detail">
+            <img src="images/course/boocamp.png" alt="boocamp Certificate" />
+            <div>
+              <small><i class="fa-solid fa-clock"></i> 50 Jam</small>
+              <a href="certificate/IT Bootcamp.pdf" class="button" target="_blank">
+                <i class="fa-solid fa-arrow-right"></i> Lihat
+              </a>
+            </div>
+          </div>
+        </div>
+          <div class="item">
+          <div class="item-detail">
+            <img src="images/course/Mikrotik.png" alt="MikroTik Certificate" />
+            <div>
+              <small><i class="fa-solid fa-clock"></i> 50 Jam</small>
+              <a href="certificate/MIKROTIK-Juanny Cheristy Souisa.pdf" class="button" target="_blank">
+                <i class="fa-solid fa-arrow-right"></i> Lihat
+              </a>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrapper">&copy; 2025 Portfolio Juanny Cheristy Souisa</div>
+    </footer>
+  </body>
+</html>
