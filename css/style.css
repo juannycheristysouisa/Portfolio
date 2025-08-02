@@ -1,0 +1,805 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 60px;
+  font-size: 16px;
+  font-family: "Nunito", sans-serif;
+  overflow-x: hidden;
+  background-color: #222831; /* TAMBAHKAN INI */
+}
+
+.wrapper {
+  max-width: 1024px;
+  width: 90%;
+  margin: auto;
+  padding: 20px 0;
+  overflow: visible;
+}
+
+/*
+  * menu
+  */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222831;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  color: white;
+}
+
+nav > .wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  right: 10px;
+  background-color: #1e1e2f;
+  list-style: none;
+  width: fit-content;
+  min-width: 180px;
+  padding: 10px 0;
+  z-index: 999;
+  border-radius: 6px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.nav-links li {
+  text-align: left;
+  list-style: none;
+}
+
+.nav-links li a {
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.nav-links.show {
+  display: flex;
+}
+
+.nav-links li a:hover {
+  background-color: #fedb07;
+  color: #222831;
+  border-radius: 4px;
+}
+
+.menu {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.menu > ul {
+  display: flex;
+  list-style-type: none;
+  gap: 30px;
+  margin: 0px;
+  padding: 0px;
+  justify-content: space-between;
+}
+
+.menu > ul > li > a {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+.menu-toggle {
+  display: block;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+  margin-left: auto;
+  padding-left: 10px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fedb07;
+  font-family: "Kanit", sans-serif;
+  flex-shrink: 0;
+}
+
+/*
+  * Hero / jumbotron
+  */
+
+header {
+  background: url("../images/background.jpg");
+  height: 50vh;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  font-family: "Kanit", sans-serif;
+  letter-spacing: 5px;
+  text-shadow: 0 0 4px #000;
+  margin: 0;
+  padding: 0;
+  padding-top: 60px; /* Sesuaikan dengan tinggi navbar */
+}
+
+.header-opacity {
+  background-color: #222831;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.header-jumbotron {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.header-jumbotron > h4 {
+  color: #fedb07;
+  font-size: 2.5rem;
+  margin: 0px;
+  padding: 0px;
+}
+
+.header-jumbotron > h5 {
+  color: #fff;
+  margin: 0px;
+  padding: 5px;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  text-transform: uppercase;
+}
+
+.header-jumbotron > h5 > .highlight {
+  color: #fedb07;
+  font-weight: bold;
+}
+
+.header-jumbotron > p {
+  padding: 5px;
+  margin: 0px 5px 20px 5px;
+  color: #fff;
+}
+
+.header-jumbotron > p > .highlight {
+  color: #fedb07;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  text-shadow: none;
+}
+
+.button {
+  background-color: #fedb07;
+  padding: 5px 10px 5px 10px;
+  border-radius: 2px;
+  font-family: "Kanit", sans-serif;
+}
+
+.button-xl {
+  font-size: 1rem;
+  padding: 20px;
+}
+
+/*
+  * statistic
+  */
+#statistic {
+  background-color: #393e46;
+  color: #fff;
+  padding: 50px 0;
+  font-family: "Kanit", sans-serif;
+}
+
+#statistic .wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#statistic .stat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1 1 180px;
+}
+
+#statistic .stat-box i {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+#statistic .stat-box p {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+}
+
+#statistic .stat-box small {
+  font-size: 1.3rem;
+  color: white;
+}
+
+/*
+  * Academic Projects
+  */
+#academic-projects {
+  background-color: #222831;
+  color: #fff;
+  padding-bottom: 80px;
+  padding-top: 40px;
+  margin-top: 0;
+  scroll-margin-top: 80px;
+}
+
+#academic-projects > .wrapper > h4 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Kanit", sans-serif;
+}
+
+#academic-projects > .wrapper > h4 > span {
+  color: #fedb07;
+}
+
+#academic-projects > .wrapper > p {
+  text-align: center;
+  margin: 0px 0px 30px 0px;
+  padding: 0px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Lebih rapi */
+  gap: 50px;
+}
+
+.grid > .item {
+  display: flex;
+  flex-direction: row; /* susun horizontal */
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px; /* Tambahkan padding kiri-kanan */
+  background-color: #393e46;
+  border: 1px solid #666;
+  border-radius: 8px;
+  gap: 30px; /* jarak antara teks dan gambar */
+  min-height: 280px;
+  max-width: 1000px; /* batas lebar maksimum */
+  margin: 0 auto; /* posisi center */
+  box-sizing: border-box;
+}
+
+.grid > .item > img {
+  width: 25%;
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;
+  order: 2; /* pindahkan gambar ke kanan */
+}
+
+.grid > .item > .item-detail {
+  width: 65%;
+  order: 1; /* pastikan teks di kiri */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  min-height: 200px;
+}
+
+.item-detail ul {
+  padding-left: 20px;
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: justify; /* pastikan juga di ul */
+}
+
+.item-detail li {
+  margin-bottom: 10px;
+  list-style-type: disc;
+  color: #ffffff;
+}
+
+.judul-helpdesk {
+  padding-left: 40px; /* geser ke kanan */
+  margin-top: 0px;
+  margin-bottom: 10px; /* beri jarak bawah agar gak nempel ke list */
+}
+
+.judul-helpdesk h4 {
+  color: white;
+  font-size: 1.5rem;
+  display: inline-block;
+  margin: 0; /* hilangkan margin default */
+}
+
+.judul-helpdesk .tahun {
+  color: #fedb07; /* biar tahun beda warna */
+  margin-left: 5px; /* beri jarak antara judul dan tahun */
+  font-weight: normal;
+}
+
+.project-card ul {
+  margin-top: 5px; /* rapatkan ke judul */
+  padding-left: 60px; /* sesuaikan indentasi list */
+}
+
+.project-card li {
+  margin-bottom: 6px; /* opsional: atur jarak antar poin */
+}
+
+.project-card > img {
+  width: 30%;
+  max-width: 250px;
+  height: auto;
+  display: block;
+  margin: 20px auto 0 auto; /* biar center di tengah bawah */
+  object-fit: contain;
+}
+
+.project-card-horizontal {
+  display: flex;
+  gap: 20px;
+  background-color: #393e46;
+  padding: 20px;
+  border-radius: 10px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.project-card-horizontal img {
+  width: 40%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.project-card-horizontal .desc {
+  width: 60%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+}
+
+/*
+  * About Me 
+  */
+#about-me {
+  background-color: #393e46;
+  color: #ffffff;
+  scroll-margin-top: 80px;
+}
+
+#about-me > .wrapper > h4 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Kanit", sans-serif;
+}
+
+#about-me > .wrapper > h4 > span {
+  color: #fedb07;
+}
+
+#about-me > .wrapper > p {
+  text-align: center;
+  margin: 0px 0px 30px 0px;
+  padding: 0px;
+}
+
+#about-me > .wrapper > div {
+  display: flex;
+  width: 70%;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#about-me > .wrapper > div > .foto {
+  width: 30%;
+}
+
+#about-me > .wrapper > div > .foto > img {
+  max-width: 100%;
+}
+
+#about-me > .wrapper > div > .desc {
+  width: 70%;
+  padding: 20px;
+  margin: 10px;
+  background-color: #222831;
+  border-radius: 10px;
+  text-align: justify;
+}
+
+#about-me > .wrapper > div > .desc > p {
+  margin: 0px 0px 10px 0px;
+}
+
+#about-me > .wrapper > div > .desc > .social {
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+  font-size: 1.4rem;
+}
+
+#about-me > .wrapper > div > .desc > .social > a {
+  color: #00adb5;
+}
+
+/*
+  * Certificate
+  */
+#certificate {
+  background-color: #393e46;
+  scroll-margin-top: 80px;
+  padding-top: 20px;
+}
+
+#certificate > .wrapper > h4 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 0px;
+  padding: 0px 0px 20px 0px;
+  font-family: "Kanit", sans-serif;
+  color: #fff;
+}
+
+#certificate > .wrapper > p {
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  color: #fff;
+}
+
+#certificate > .wrapper > .grid-alt > .item {
+  background-color: #222831;
+  margin: 0px;
+  padding: 0px;
+}
+
+#certificate > .wrapper > .grid-alt > .item-detail {
+  padding: 0px;
+  margin: 0px;
+  font-size: 1.4rem;
+  width: 100%;
+}
+
+#certificate > .wrapper > .grid-alt > .item-detail > img {
+  width: 100%;
+  border-top-left-radius: 5px;
+}
+
+.grid-alt {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Lebih rapi */
+  gap: 50px;
+}
+
+.grid-alt > .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid #666;
+  background-color: #393e46;
+  border-radius: 8px;
+  padding: 10px 16px; /* kunci space kiri-kanan */
+  width: fit-content;
+  margin: 10px auto;
+}
+
+.grid-alt > .item > img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.grid-alt > .item > .item-detail {
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  padding: 5px;
+}
+
+.grid-alt > .item > .item-detail > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  padding: 0 10px;
+}
+
+.grid-alt > .item > .item-detail > div > small {
+  color: #ccc;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.grid-alt > .item > .item-detail > div > a {
+  font-size: 0.9rem;
+  background-color: #fedb07;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #222;
+}
+
+.item-detail img {
+  width: 100%;
+  max-width: 250px;
+  max-height: 140px;
+  display: block;
+  margin: 0 auto 10px auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/*
+  * copyright
+  */
+footer {
+  background-color: #222831;
+  color: #fff;
+  text-align: center;
+}
+
+footer > .wrapper {
+  padding: 30px 0px 30px 0px;
+}
+
+/*
+  * 1024, 900, 768, 600, 450
+  */
+
+/* Umum untuk layar kecil (tablet dan hp) */
+@media only screen and (max-width: 1024px) {
+  .wrapper {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr; /* Satu kolom di layar kecil */
+  }
+
+  .grid-alt {
+    grid-template-columns: 1fr;
+  }
+
+  #about-me > .wrapper > div {
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+
+  #about-me > .wrapper > div > .desc,
+  #about-me > .wrapper > div > .foto {
+    width: 100%;
+  }
+
+  .project-card-horizontal {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .project-card-horizontal img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .project-card-horizontal .desc {
+    width: 100%;
+  }
+
+  .grid > .item {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .grid > .item > img {
+    order: 0;
+    width: 80%;
+  }
+
+  .grid > .item > .item-detail {
+    width: 100%;
+    order: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none; /* Hide hamburger menu */
+  }
+
+  .nav-links {
+    display: flex !important; /* Show nav */
+    position: static;
+    flex-direction: row;
+    list-style: none;
+    gap: 30px;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-links li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .nav-links li a {
+    color: white;
+    padding: 8px 12px;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* Untuk layar sangat kecil (max 600px) */
+@media only screen and (max-width: 600px) {
+  nav > .wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  .nav-links {
+    width: 90vw;
+    right: 5%;
+    left: 5%;
+  }
+
+  .menu {
+    width: 100%;
+  }
+
+  .menu > ul {
+    flex-direction: column;
+    width: 100%;
+    padding-left: 0;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .menu > ul > li {
+    width: 100%;
+  }
+
+  .menu > ul > li > a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1.2rem;
+  }
+
+  .header-jumbotron > h4 {
+    font-size: 2rem;
+  }
+
+  .header-jumbotron > h5 {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+
+  .button-xl {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  #statistic > .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #statistic > .wrapper > div {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .grid-alt > .item {
+    width: 90%;
+  }
+
+  footer > .wrapper {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .header-jumbotron > h4 {
+    font-size: 1.6rem;
+  }
+
+  .header-jumbotron > h5 {
+    font-size: 1rem;
+  }
+
+  .button-xl {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  #academic-projects > .wrapper > h4,
+  #about-me > .wrapper > h4 {
+    font-size: 2rem;
+  }
+
+  .grid,
+  .grid-alt {
+    grid-template-columns: 1fr;
+  }
+
+  .item-detail ul {
+    padding-left: 15px;
+  }
+
+  .judul-helpdesk {
+    padding-left: 20px;
+  }
+}
